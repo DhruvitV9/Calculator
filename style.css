@@ -1,0 +1,60 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #F5F5F5;
+}
+
+.headingname{
+    color: #FF6F61;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   
+}
+
+
+.container{
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border: none;
+    margin:10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: white;
+    box-shadow: 6px 6px 10px rgba(255, 111, 97, 0.3), -6px -6px 10px rgba(255, 111, 97, 0.3);
+    
+}
+
+.calc{
+    padding: 20px;
+    background: #FF6F61;
+    border-radius: 20px;
+    box-shadow: -1px -1px 15px 10px rgba(255, 111, 97, 0.5);
+}
+
+#input{
+    height:100px;
+    text-align: center;
+    font-size: 60px;
+    color: #F5F5F5;
+    overflow: hidden;
+    max-width: 400px;
+
+}
+
+.dgn{
+    box-shadow: inset 3px 3px 5px rgba(255, 111, 97, 0.5),inset -3px -3px 5px rgba(255, 111, 97, 0.5);
+}
