@@ -1,60 +1,134 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-
 }
 
-body{
+body {
     background-color: #F5F5F5;
 }
 
-.headingname{
+.headingname {
     color: #FF6F61;
     justify-content: center;
     align-items: center;
     display: flex;
-   
+    font-size: 2.5rem; /* Scales heading size */
 }
 
-
-.container{
-    height:100vh;
-    width:100%;
-    display:flex;
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-button{
+button {
     border: none;
-    margin:10px;
+    margin: 10px;
     width: 80px;
     height: 80px;
     border-radius: 50px;
     cursor: pointer;
     background: white;
     box-shadow: 6px 6px 10px rgba(255, 111, 97, 0.3), -6px -6px 10px rgba(255, 111, 97, 0.3);
-    
+    font-size: 1.5rem; /* Responsive text size inside buttons */
+    transition: all 0.3s ease; /* Smooth resizing */
 }
 
-.calc{
+button:hover {
+    transform: scale(1.05); /* Button hover effect for better interaction */
+}
+
+.calc {
     padding: 20px;
     background: #FF6F61;
     border-radius: 20px;
     box-shadow: -1px -1px 15px 10px rgba(255, 111, 97, 0.5);
+    max-width: 100%; /* Makes sure calculator scales to the screen size */
 }
 
-#input{
-    height:100px;
+#input {
+    height: 100px;
     text-align: center;
-    font-size: 60px;
+    font-size: 2.5rem; /* Font size scales based on screen */
     color: #F5F5F5;
     overflow: hidden;
-    max-width: 400px;
-
+    max-width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 111, 97, 0.7); /* Better contrast for input */
+    border-radius: 10px;
 }
 
-.dgn{
-    box-shadow: inset 3px 3px 5px rgba(255, 111, 97, 0.5),inset -3px -3px 5px rgba(255, 111, 97, 0.5);
+.dgn {
+    box-shadow: inset 3px 3px 5px rgba(255, 111, 97, 0.5), inset -3px -3px 5px rgba(255, 111, 97, 0.5);
+}
+
+.calc div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* Small devices like mobile (up to 600px) */
+@media (max-width: 600px) {
+    .headingname {
+        font-size: 1.8rem; /* Adjust heading for small screens */
+    }
+
+    button {
+        width: 60px; /* Smaller buttons on mobile */
+        height: 60px;
+        font-size: 1.2rem; /* Smaller text in buttons */
+    }
+
+    #input {
+        height: 80px; /* Smaller input height */
+        font-size: 2rem; /* Smaller input text */
+    }
+
+    .calc {
+        padding: 10px;
+        border-radius: 15px; /* Adjusting for smaller screens */
+        box-shadow: none; /* Optional: Reduce shadows on smaller screens for a cleaner look */
+    }
+}
+
+/* Medium devices like tablets (up to 900px) */
+@media (max-width: 900px) {
+    button {
+        width: 70px;
+        height: 70px;
+        font-size: 1.3rem; /* Medium button and text size */
+    }
+
+    #input {
+        height: 90px;
+        font-size: 2.2rem;
+    }
+
+    .headingname {
+        font-size: 2rem; /* Slightly smaller heading for tablets */
+    }
+}
+
+/* Larger devices (like laptops and desktops) */
+@media (min-width: 900px) {
+    button {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem; /* Keep button size large for big screens */
+    }
+
+    #input {
+        font-size: 2.5rem; /* Larger input text on big screens */
+    }
+
+    .headingname {
+        font-size: 2.5rem; /* Larger heading on big screens */
+    }
 }
